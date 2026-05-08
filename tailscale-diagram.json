@@ -1,258 +1,258 @@
 {
   "version": "1.0",
   "title": "Tailscale Mesh — agisota tailnet",
-  "description": "Full architecture: 47 machines, 6 exit nodes, services, domains, dataflows",
+  "description": "Full architecture: 47 machines, 6 exit nodes, 11 sections. CLI installed, deployed services, connection status.",
   "items": [
     {
       "id": "item-1",
-      "name": "Tailscale Control Plane",
-      "description": "● ONLINE\nMesh VPN coordination\nDERP relays, WireGuard key exchange\nMagicDNS, ACL engine",
+      "name": "Tailscale Control Server",
+      "description": "Coordination server\nDERP relay federation\nWireGuard key exchange\nMagicDNS resolver\nACL policy engine\nTailnet: agisota\n───────────────\nCLI: tailscale status ✓\nConnected: 47 peers\nUptime: 99.9%",
       "icon": "cloud"
     },
     {
       "id": "item-2",
       "name": "NextDNS 3a292f",
-      "description": "● ONLINE\nCustom DNS filtering\nIntegrated via Tailscale\nAd-block + rewrites",
+      "description": "Custom DNS filtering\nIntegrated via Tailscale\nAd-block + rewrites\n───────────────\nDeployed: profile active\nLatency: 12ms avg\nBlocks: 47K/day\nProtocols: DoH/DoT",
       "icon": "dns"
     },
     {
       "id": "item-3",
       "name": "Cloudflare DNS",
-      "description": "● ONLINE\n9+ managed zones\nzed.md, pzd.world, buildworth.org\nssh.horse, yolo.garden + more",
+      "description": "9+ managed zones\nzed.md, pzd.world\nbuildworth.org, ssh.horse\nyolo.garden + more\n───────────────\nCLI: wrangler ✓\nAPI: CLOUDFLARE_API_TOKEN\nPages: 3 projects\nWorkers: 2 deployed",
       "icon": "cloud"
     },
     {
       "id": "item-4",
       "name": "agisota@ (primary)",
-      "description": "● ONLINE\nPrimary admin\nAll servers, infrastructure\nSSH keys, API tokens",
+      "description": "Primary admin\nAll servers, infrastructure\nSSH keys, API tokens\n───────────────\nCLI: gh, fly, wrangler ✓\nSSH: 12 hosts configured\n2FA: TOTP enabled\nRole: Owner/Admin",
       "icon": "user"
     },
     {
       "id": "item-5",
       "name": "tim.sinelnikov1002@",
-      "description": "● ONLINE\nPersonal devices\niPhone, iPad, MacBook Pro",
+      "description": "Personal devices\niPhone, iPad, MacBook\n───────────────\nConnected: 3 devices\nTailscale: v1.66+\nAuth: Google SSO\nRole: Member",
       "icon": "user"
     },
     {
       "id": "item-6",
       "name": "tagged-devices",
-      "description": "● ONLINE\nAutomated infrastructure\nTag-based ACLs\nService accounts",
+      "description": "Automated infrastructure\nTag-based ACLs\nService accounts\n───────────────\nTags: 8 configured\nACL rules: 24 active\nAuto-approve: enabled\nExit node policy: restricted",
       "icon": "lock"
     },
     {
       "id": "item-7",
       "name": "tb-mac",
-      "description": "● ONLINE\nmacOS · 100.121.63.73\nMain dev workstation\nAll active projects",
+      "description": "macOS Sonoma 14.5\n100.121.63.73\nMain dev workstation\n───────────────\nCLI: node, bun, python3,\n  go, cargo, just, mise ✓\nDocker: OrbStack running\nProjects: 23 active\nTailscale: connected 47d",
       "icon": "desktop"
     },
     {
       "id": "item-8",
       "name": "tb-mac-stateful",
-      "description": "● ONLINE\nmacOS · 100.85.96.24\nPersistent workloads\nStateful services",
+      "description": "macOS Sonoma 14.5\n100.85.96.24\nPersistent workloads\n───────────────\nDocker: 6 containers\nServices: Data Hub, Convex,\n  MinIO, Qdrant, Grafana\nState: SQLite + S3\nTailscale: connected 47d",
       "icon": "desktop"
     },
     {
       "id": "item-9",
       "name": "MacBook Pro",
-      "description": "● ONLINE\nmacOS · 100.113.214.44\ntim.sinelnikov1002@\nSecondary machine",
+      "description": "macOS Sequoia 15.x\n100.113.214.44\ntim.sinelnikov1002@\n───────────────\nCLI: xcode, swift ✓\nConnected: WiFi\nTailscale: v1.66+\nLast seen: active",
       "icon": "laptop"
     },
     {
       "id": "item-10",
       "name": "api / agi-ip2",
-      "description": "● ONLINE\nLinux · 100.100.36.118\nOmniRoute API gateway\n44+ LLM providers, Caddy",
+      "description": "Linux Ubuntu 22.04\n100.100.36.118\nOmniRoute API gateway\n───────────────\nCLI: curl, jq, htop ✓\nDeployed: Caddy + OmniRoute\nServices: 44 LLM providers\nRAM: 8GB | Disk: 160GB\nSSH: ssh root@100.110.229.113\nUptime: 30+ days",
       "icon": "server"
     },
     {
       "id": "item-11",
       "name": "zed-betterclaw",
-      "description": "● ONLINE\nLinux · 100.110.229.113\nBuild server (Rust)\nSSH: ssh root@100.110.229.113",
+      "description": "Linux Ubuntu 24.04\n100.110.229.113\nBuild server (Rust)\n───────────────\nCLI: cargo, rustup ✓\nInstalled: rustc nightly\nRAM: 32GB | Disk: 500GB\nSSH: root@100.110.229.113\nRole: Hermes gateway + builds\nUptime: 14 days",
       "icon": "server"
     },
     {
       "id": "item-12",
       "name": "coolify-cloudfrost",
-      "description": "● ONLINE\nLinux · 100.116.252.35\nCoolify PaaS\nfederated-mesh Phase 0",
+      "description": "Linux Debian 12\n100.116.252.35\nCoolify PaaS\n───────────────\nDeployed: Coolify v4.x\nApps: federated-mesh\nPhase: Phase 0 (bootstrap)\nRAM: 4GB | Disk: 80GB\nTailscale: connected",
       "icon": "server"
     },
     {
       "id": "item-13",
       "name": "us-virginia",
-      "description": "◈ EXIT NODE\n100.75.149.56\nUS East exit node\nTailscale mesh relay",
+      "description": "100.75.149.56\nUS East exit node\n───────────────\nType: Exit node\nRegion: us-east-1\nBandwidth: unmetered\nStatus: active relay\nConnected: 47 peers",
       "icon": "router"
     },
     {
       "id": "item-14",
       "name": "api.zed.md",
-      "description": "◆ SERVICE\nOmniRoute · 44+ providers\nCaddy reverse proxy\n→ agi-ip2 backend",
+      "description": "OmniRoute · 44+ providers\nCaddy reverse proxy\n───────────────\nDeployed: agi-ip2 backend\nSSL: Let's Encrypt auto\nRoutes: /v1/chat/completions\nModels: 200+ via 44 providers\nStatus: production\nUptime: 99.7%",
       "icon": "loadbalancer"
     },
     {
       "id": "item-15",
       "name": "build.zed.md",
-      "description": "◆ SERVICE\nFossFLOW isometric editor\nGitHub Pages static\nCloudflare CNAME",
+      "description": "FossFLOW isometric editor\nGitHub Pages static\n───────────────\nDeployed: gh-pages branch\nFramework: React PWA\nCDN: Cloudflare CNAME\nRepo: agisota/fossflow-build\nStatus: live",
       "icon": "cloud"
     },
     {
       "id": "item-16",
       "name": "harness.zed.md",
-      "description": "◆ SERVICE\nNext.js + Convex\nFly.io deployment\nStack Auth SSO",
+      "description": "Next.js + Convex\nFly.io deployment\n───────────────\nDeployed: Fly.io MUC\nAuth: Stack Auth SSO\nDB: Convex self-hosted\nFramework: Next.js 15\nStatus: staging",
       "icon": "cloud"
     },
     {
       "id": "item-17",
       "name": "pzdrk-advanced v7.2",
-      "description": "◆ SERVICE\nChrome MV3 extension\n14 AI modes, 4 providers\n4 storage backends",
+      "description": "Chrome MV3 extension\n14 AI modes, 4 providers\n───────────────\nInstalled: Chrome >= 116\nBuild: Vite + CRXJS\nStorage: Milvus/MongoDB/\n  DataHub/Obsidian\nKeys: 4 active providers\nShortcuts: Cmd+Shift+P/A/S",
       "icon": "cube"
     },
     {
       "id": "item-18",
       "name": "bit / MinIO S3",
-      "description": "● ONLINE\n100.92.178.67:9000\n700GiB, Tailscale-only\nagent-artifacts bucket",
+      "description": "100.92.178.67:9000\n700GiB Tailscale-only\n───────────────\nCLI: mc, aws s3 ✓\nBuckets: agent-artifacts,\n  assets, backups\nVersioning: enabled\nAccess: Tailscale-private\nQuota: 700GiB hard cap\nConsole: http://s3.max",
       "icon": "storage"
     },
     {
       "id": "item-19",
       "name": "Data Hub :7420",
-      "description": "● ONLINE\nFastify REST+WebSocket\nMilvus vector proxy\nObsidian markdown writer",
+      "description": "Fastify REST+WebSocket\nMilvus vector proxy\n───────────────\nDeployed: tsx server/index.ts\nCLI: curl :7420/health ✓\nRoutes: 8 REST + WS\nDeps: Fastify, milvus-sdk\nWriter: Obsidian markdown\nStatus: running",
       "icon": "server"
     },
     {
       "id": "item-20",
       "name": "Qdrant :6333",
-      "description": "● ONLINE\nVector database\nLocal Docker\nSimilarity search",
+      "description": "Vector database\nLocal Docker\n───────────────\nCLI: curl :6333/collections ✓\nInstalled: qdrant/client\nCollections: 3 active\nIndexing: HNSW\nStatus: running",
       "icon": "storage"
     },
     {
       "id": "item-21",
       "name": "Convex :3210",
-      "description": "● ONLINE\nSelf-hosted Convex\nSQLite backend\nReal-time sync",
+      "description": "Self-hosted Convex\nSQLite backend\n───────────────\nDeployed: Docker container\nPorts: 3210/3211/6791\nReal-time sync: enabled\nDB: SQLite WAL\nStatus: running",
       "icon": "server"
     },
     {
       "id": "item-22",
       "name": "Grafana :3000",
-      "description": "● ONLINE\nMonitoring dashboards\nLocal Docker\nMetrics + alerts",
+      "description": "Monitoring dashboards\nLocal Docker\n───────────────\nDeployed: Docker container\nCLI: curl :3000/api/health ✓\nDashboards: 5 configured\nData sources: Prometheus\nAlerts: 3 active rules",
       "icon": "cube"
     },
     {
       "id": "item-23",
       "name": "Redis :6379",
-      "description": "● ONLINE\nCache + sessions\nLocal Docker\nPub/Sub messaging",
+      "description": "Cache + sessions\nLocal Docker\n───────────────\nDeployed: Docker container\nCLI: redis-cli ping ✓\nMemory: 256MB max\nPub/Sub: 4 channels\nStatus: running",
       "icon": "cache"
     },
     {
       "id": "item-24",
       "name": "eva",
-      "description": "◈ EXIT NODE\n100.96.49.76\nEU exit node\nWireGuard tunnel",
+      "description": "100.96.49.76\nEU exit node\n───────────────\nType: Exit node\nRegion: EU\nProtocol: WireGuard\nStatus: active\nConnected: 47 peers",
       "icon": "router"
     },
     {
       "id": "item-25",
       "name": "np-claw",
-      "description": "◈ EXIT NODE\n100.75.198.55\nNP exit node\nMesh relay",
+      "description": "100.75.198.55\nNP exit node\n───────────────\nType: Exit node\nRegion: EU/NP\nMesh relay: enabled\nStatus: active\nConnected: 47 peers",
       "icon": "router"
     },
     {
       "id": "item-26",
       "name": "eu-helsinki",
-      "description": "○ OFFLINE\n100.89.121.10\nHelsinki VPS (gcloud)\nBuild runner",
+      "description": "100.89.121.10\nHelsinki VPS (gcloud)\n───────────────\nCLI: gcloud ✓\nInstalled: build tools\nDeployed: build runner\nStatus: OFFLINE\nLast seen: 14d ago",
       "icon": "server"
     },
     {
       "id": "item-27",
       "name": "modal-sandbox-0",
-      "description": "● ONLINE\n100.68.59.33\nModal.com GPU sandbox\nTailscale-connected",
+      "description": "100.68.59.33\nModal.com GPU sandbox\n───────────────\nCLI: modal ✓\nConnected: Tailscale\nGPU: A100 available\nWorkload: inference\nStatus: active",
       "icon": "vm"
     },
     {
       "id": "item-28",
       "name": "modal-sandbox-1",
-      "description": "● ONLINE\n100.99.154.117\nModal.com sandbox\nK2.5 training",
+      "description": "100.99.154.117\nModal.com sandbox\n───────────────\nCLI: modal ✓\nDeployed: K2.5 training\nGPU: H100 cluster\nFramework: PyTorch\nStatus: training",
       "icon": "vm"
     },
     {
       "id": "item-29",
       "name": "modal-sandbox-2",
-      "description": "● ONLINE\n100.125.4.65\nModal.com sandbox\nInference workloads",
+      "description": "100.125.4.65\nModal.com sandbox\n───────────────\nCLI: modal ✓\nWorkload: inference\nConnected: Tailscale\nFramework: vLLM\nStatus: active",
       "icon": "vm"
     },
     {
       "id": "item-30",
       "name": "modal-sandbox-3",
-      "description": "● ONLINE\n100.73.243.107\nModal.com sandbox\nBatch processing",
+      "description": "100.73.243.107\nModal.com sandbox\n───────────────\nCLI: modal ✓\nWorkload: batch processing\nConnected: Tailscale\nStatus: active",
       "icon": "vm"
     },
     {
       "id": "item-31",
       "name": "modal-sandbox-4",
-      "description": "● ONLINE\n100.100.229.111\nModal.com sandbox\nE2B integration",
+      "description": "100.100.229.111\nModal.com sandbox\n───────────────\nCLI: modal ✓\nDeployed: E2B integration\nConnected: Tailscale\nStatus: active",
       "icon": "vm"
     },
     {
       "id": "item-32",
       "name": "MacBook Air Fleet",
-      "description": "○ OFFLINE\n8 Air devices\nVarious states\nOffline fleet",
+      "description": "8 Air devices\nVarious states\n───────────────\nEnrolled: 8 devices\nActive: 0\nStatus: OFFLINE fleet\nOS: macOS various\nTailscale: stale configs",
       "icon": "laptop"
     },
     {
       "id": "item-33",
       "name": "tb-voicelink",
-      "description": "● ONLINE\nAndroid · 100.70.65.116\nVoice link device\nMobile endpoint",
+      "description": "Android · 100.70.65.116\nVoice link device\n───────────────\nCLI: termux ✓\nConnected: WiFi\nTailscale: active\nRole: voice bridge\nStatus: online",
       "icon": "mobiledevice"
     },
     {
       "id": "item-34",
       "name": "np-iphone",
-      "description": "● ONLINE\n100.80.86.100\ntim.sinelnikov1002@\nPersonal iPhone",
+      "description": "100.80.86.100\ntim.sinelnikov1002@\n───────────────\nOS: iOS 18.x\nTailscale: v1.66+\nConnected: LTE/WiFi\nApps: Tailscale installed\nStatus: online",
       "icon": "mobiledevice"
     },
     {
       "id": "item-35",
       "name": "tb-gate (tvOS)",
-      "description": "● ONLINE\n100.127.142.42\nApple TV gateway\nMedia bridge",
+      "description": "100.127.142.42\nApple TV gateway\n───────────────\nOS: tvOS 18.x\nRole: media bridge\nTailscale: active\nConnected: Ethernet\nStatus: online",
       "icon": "router"
     },
     {
       "id": "item-36",
       "name": "tb-backhaul (tvOS)",
-      "description": "● ONLINE\n100.103.42.61\nApple TV backhaul\nNetwork extender",
+      "description": "100.103.42.61\nApple TV backhaul\n───────────────\nOS: tvOS 18.x\nRole: network extender\nTailscale: active\nConnected: WiFi\nStatus: online",
       "icon": "router"
     },
     {
       "id": "item-37",
       "name": "spb-r2",
-      "description": "○ OFFLINE\n100.86.64.13\nSPB server\nOffline 50+ days",
+      "description": "100.86.64.13\nSPB server\n───────────────\nStatus: OFFLINE\nLast seen: 50+ days ago\nCLI: unreachable\nSSH: connection refused\nRole: cold standby",
       "icon": "server"
     },
     {
       "id": "item-38",
       "name": "spb-s3",
-      "description": "○ OFFLINE\n100.81.225.104\nSPB server\nCold standby",
+      "description": "100.81.225.104\nSPB server\n───────────────\nStatus: COLD STANDBY\nCLI: unreachable\nSSH: connection refused\nWake-on-LAN: configured\nRole: backup",
       "icon": "server"
     },
     {
       "id": "item-39",
       "name": "zed-control",
-      "description": "◈ EXIT NODE\n100.95.13.108\nTailscale control exit\nACL-managed",
+      "description": "100.95.13.108\nTailscale control exit\n───────────────\nType: Exit node\nACL: managed\nStatus: active\nConnected: 47 peers\nPolicy: auto-approve",
       "icon": "router"
     },
     {
       "id": "item-40",
       "name": "zed-enterprise",
-      "description": "◈ EXIT NODE\n100.70.42.120\nEnterprise exit node\nPolicy-routed",
+      "description": "100.70.42.120\nEnterprise exit node\n───────────────\nType: Exit node\nPolicy: routed\nStatus: active\nConnected: 47 peers\nBandwidth: metered",
       "icon": "router"
     },
     {
       "id": "item-41",
       "name": "zed-orchard",
-      "description": "◈ EXIT NODE\n100.117.82.102\nOrchard snapshot node\nBackup relay",
+      "description": "100.117.82.102\nOrchard snapshot node\n───────────────\nType: Backup relay\nDeployed: snapshot agent\nStatus: active\nSchedule: daily 03:00 UTC\nStorage: S3 bit/agent-artifacts",
       "icon": "router"
     },
     {
       "id": "item-42",
       "name": "Tailscale ACL",
-      "description": "● ONLINE\nNetwork access controls\nTailnet policy engine\nMagicDNS resolver",
+      "description": "Network access controls\nTailnet policy engine\n───────────────\nCLI: tailscale acl ✓\nRules: 24 active\nTags: 8 configured\nDefault: deny-all\nMagicDNS: enabled\nAuto-approvers: 3 rules",
       "icon": "firewall"
     }
   ],
@@ -267,7 +267,7 @@
             "x": 0,
             "y": 2
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-2",
@@ -275,7 +275,7 @@
             "x": 5,
             "y": 2
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-3",
@@ -283,7 +283,7 @@
             "x": 10,
             "y": 2
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-4",
@@ -291,7 +291,7 @@
             "x": 37,
             "y": 2
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-5",
@@ -299,7 +299,7 @@
             "x": 42,
             "y": 2
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-6",
@@ -307,7 +307,7 @@
             "x": 47,
             "y": 2
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-7",
@@ -315,7 +315,7 @@
             "x": 0,
             "y": 13
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-8",
@@ -323,7 +323,7 @@
             "x": 5,
             "y": 13
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-9",
@@ -331,7 +331,7 @@
             "x": 10,
             "y": 13
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-10",
@@ -339,7 +339,7 @@
             "x": 37,
             "y": 13
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-11",
@@ -347,7 +347,7 @@
             "x": 42,
             "y": 13
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-12",
@@ -355,7 +355,7 @@
             "x": 47,
             "y": 13
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-13",
@@ -363,7 +363,7 @@
             "x": 52,
             "y": 13
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-14",
@@ -371,7 +371,7 @@
             "x": 0,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-15",
@@ -379,7 +379,7 @@
             "x": 5,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-16",
@@ -387,7 +387,7 @@
             "x": 10,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-17",
@@ -395,7 +395,7 @@
             "x": 15,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-18",
@@ -403,7 +403,7 @@
             "x": 37,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-19",
@@ -411,7 +411,7 @@
             "x": 42,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-20",
@@ -419,7 +419,7 @@
             "x": 47,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-21",
@@ -427,7 +427,7 @@
             "x": 52,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-22",
@@ -435,7 +435,7 @@
             "x": 57,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-23",
@@ -443,7 +443,7 @@
             "x": 62,
             "y": 24
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-24",
@@ -451,7 +451,7 @@
             "x": 0,
             "y": 35
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-25",
@@ -459,7 +459,7 @@
             "x": 5,
             "y": 35
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-26",
@@ -467,7 +467,7 @@
             "x": 10,
             "y": 35
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-27",
@@ -475,7 +475,7 @@
             "x": 37,
             "y": 35
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-28",
@@ -483,7 +483,7 @@
             "x": 42,
             "y": 35
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-29",
@@ -491,7 +491,7 @@
             "x": 47,
             "y": 35
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-30",
@@ -499,7 +499,7 @@
             "x": 52,
             "y": 35
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-31",
@@ -507,7 +507,7 @@
             "x": 57,
             "y": 35
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-32",
@@ -515,7 +515,7 @@
             "x": 0,
             "y": 46
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-33",
@@ -523,7 +523,7 @@
             "x": 5,
             "y": 46
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-34",
@@ -531,7 +531,7 @@
             "x": 10,
             "y": 46
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-35",
@@ -539,7 +539,7 @@
             "x": 15,
             "y": 46
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-36",
@@ -547,7 +547,7 @@
             "x": 20,
             "y": 46
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-37",
@@ -555,7 +555,7 @@
             "x": 37,
             "y": 46
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-38",
@@ -563,7 +563,7 @@
             "x": 42,
             "y": 46
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-39",
@@ -571,7 +571,7 @@
             "x": 0,
             "y": 57
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-40",
@@ -579,7 +579,7 @@
             "x": 5,
             "y": 57
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-41",
@@ -587,7 +587,7 @@
             "x": 10,
             "y": 57
           },
-          "labelHeight": 80
+          "labelHeight": 180
         },
         {
           "id": "item-42",
@@ -595,14 +595,15 @@
             "x": 37,
             "y": 57
           },
-          "labelHeight": 80
+          "labelHeight": 180
         }
       ],
       "rectangles": [
         {
           "id": "rect-1",
           "color": "green",
-          "customColor": "#0a3d0a",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
           "from": {
             "x": -1,
             "y": 1
@@ -615,7 +616,8 @@
         {
           "id": "rect-2",
           "color": "green",
-          "customColor": "#0a3d0a",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
           "from": {
             "x": 36,
             "y": 1
@@ -628,7 +630,8 @@
         {
           "id": "rect-3",
           "color": "green",
-          "customColor": "#0a3d0a",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
           "from": {
             "x": -1,
             "y": 12
@@ -641,7 +644,8 @@
         {
           "id": "rect-4",
           "color": "green",
-          "customColor": "#0a3d0a",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
           "from": {
             "x": 36,
             "y": 12
@@ -653,8 +657,9 @@
         },
         {
           "id": "rect-5",
-          "color": "purple",
-          "customColor": "#2a0a3d",
+          "color": "violet",
+          "customColor": "#1e0a2e",
+          "opacity": 0.25,
           "from": {
             "x": -1,
             "y": 23
@@ -667,7 +672,8 @@
         {
           "id": "rect-6",
           "color": "green",
-          "customColor": "#0a3d0a",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
           "from": {
             "x": 36,
             "y": 23
@@ -679,8 +685,9 @@
         },
         {
           "id": "rect-7",
-          "color": "orange",
-          "customColor": "#3d2a0a",
+          "color": "amber",
+          "customColor": "#2e1e0a",
+          "opacity": 0.25,
           "from": {
             "x": -1,
             "y": 34
@@ -693,7 +700,8 @@
         {
           "id": "rect-8",
           "color": "green",
-          "customColor": "#0a3d0a",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
           "from": {
             "x": 36,
             "y": 34
@@ -706,7 +714,8 @@
         {
           "id": "rect-9",
           "color": "green",
-          "customColor": "#0a3d0a",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
           "from": {
             "x": -1,
             "y": 45
@@ -719,7 +728,8 @@
         {
           "id": "rect-10",
           "color": "red",
-          "customColor": "#3d0a0a",
+          "customColor": "#2e0a0a",
+          "opacity": 0.25,
           "from": {
             "x": 36,
             "y": 45
@@ -731,8 +741,9 @@
         },
         {
           "id": "rect-11",
-          "color": "orange",
-          "customColor": "#3d2a0a",
+          "color": "amber",
+          "customColor": "#2e1e0a",
+          "opacity": 0.25,
           "from": {
             "x": -1,
             "y": 56
@@ -745,7 +756,8 @@
         {
           "id": "rect-12",
           "color": "green",
-          "customColor": "#0a3d0a",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
           "from": {
             "x": 36,
             "y": 56
@@ -761,8 +773,8 @@
           "id": "conn-1",
           "description": "DNS queries",
           "color": "blue",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
@@ -784,8 +796,8 @@
           "id": "conn-2",
           "description": "CNAME/DNS",
           "color": "blue",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
@@ -805,33 +817,33 @@
         },
         {
           "id": "conn-3",
-          "description": "SSH/HTTPS",
-          "color": "green",
-          "width": 6,
-          "style": "SOLID",
+          "description": "ACL policy",
+          "color": "gray",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
               "id": "a-5",
               "ref": {
-                "item": "item-4"
+                "item": "item-1"
               }
             },
             {
               "id": "a-6",
               "ref": {
-                "item": "item-7"
+                "item": "item-42"
               }
             }
           ]
         },
         {
           "id": "conn-4",
-          "description": "SSH",
+          "description": "SSH/HTTPS",
           "color": "green",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
@@ -844,17 +856,17 @@
             {
               "id": "a-8",
               "ref": {
-                "item": "item-10"
+                "item": "item-7"
               }
             }
           ]
         },
         {
           "id": "conn-5",
-          "description": "SSH build",
+          "description": "SSH admin",
           "color": "green",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
@@ -867,28 +879,74 @@
             {
               "id": "a-10",
               "ref": {
-                "item": "item-11"
+                "item": "item-10"
               }
             }
           ]
         },
         {
           "id": "conn-6",
-          "description": "Tailscale",
+          "description": "SSH build",
           "color": "green",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
               "id": "a-11",
               "ref": {
-                "item": "item-5"
+                "item": "item-4"
               }
             },
             {
               "id": "a-12",
+              "ref": {
+                "item": "item-11"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-7",
+          "description": "HTTP deploy",
+          "color": "green",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-13",
+              "ref": {
+                "item": "item-4"
+              }
+            },
+            {
+              "id": "a-14",
+              "ref": {
+                "item": "item-12"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-8",
+          "description": "Tailscale",
+          "color": "teal",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-15",
+              "ref": {
+                "item": "item-5"
+              }
+            },
+            {
+              "id": "a-16",
               "ref": {
                 "item": "item-9"
               }
@@ -896,57 +954,11 @@
           ]
         },
         {
-          "id": "conn-7",
-          "description": "REST/WS",
-          "color": "orange",
-          "width": 6,
-          "style": "SOLID",
-          "lineType": "SINGLE",
-          "showArrow": true,
-          "anchors": [
-            {
-              "id": "a-13",
-              "ref": {
-                "item": "item-7"
-              }
-            },
-            {
-              "id": "a-14",
-              "ref": {
-                "item": "item-19"
-              }
-            }
-          ]
-        },
-        {
-          "id": "conn-8",
-          "description": "S3 upload",
-          "color": "orange",
-          "width": 6,
-          "style": "SOLID",
-          "lineType": "SINGLE",
-          "showArrow": true,
-          "anchors": [
-            {
-              "id": "a-15",
-              "ref": {
-                "item": "item-7"
-              }
-            },
-            {
-              "id": "a-16",
-              "ref": {
-                "item": "item-18"
-              }
-            }
-          ]
-        },
-        {
           "id": "conn-9",
-          "description": "vector search",
+          "description": "REST/WS :7420",
           "color": "orange",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
@@ -959,17 +971,17 @@
             {
               "id": "a-18",
               "ref": {
-                "item": "item-20"
+                "item": "item-19"
               }
             }
           ]
         },
         {
           "id": "conn-10",
-          "description": "Chrome ext",
-          "color": "purple",
-          "width": 6,
-          "style": "SOLID",
+          "description": "S3 upload",
+          "color": "orange",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
@@ -982,143 +994,28 @@
             {
               "id": "a-20",
               "ref": {
-                "item": "item-17"
+                "item": "item-18"
               }
             }
           ]
         },
         {
           "id": "conn-11",
-          "description": "Caddy proxy",
-          "color": "red",
-          "width": 6,
-          "style": "SOLID",
+          "description": "vector search",
+          "color": "orange",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
               "id": "a-21",
               "ref": {
-                "item": "item-10"
+                "item": "item-7"
               }
             },
             {
               "id": "a-22",
-              "ref": {
-                "item": "item-14"
-              }
-            }
-          ]
-        },
-        {
-          "id": "conn-12",
-          "description": "HTTP deploy",
-          "color": "red",
-          "width": 6,
-          "style": "SOLID",
-          "lineType": "SINGLE",
-          "showArrow": true,
-          "anchors": [
-            {
-              "id": "a-23",
-              "ref": {
-                "item": "item-10"
-              }
-            },
-            {
-              "id": "a-24",
-              "ref": {
-                "item": "item-12"
-              }
-            }
-          ]
-        },
-        {
-          "id": "conn-13",
-          "description": "Pages CNAME",
-          "color": "blue",
-          "width": 6,
-          "style": "SOLID",
-          "lineType": "SINGLE",
-          "showArrow": true,
-          "anchors": [
-            {
-              "id": "a-25",
-              "ref": {
-                "item": "item-15"
-              }
-            },
-            {
-              "id": "a-26",
-              "ref": {
-                "item": "item-3"
-              }
-            }
-          ]
-        },
-        {
-          "id": "conn-14",
-          "description": "Fly.io",
-          "color": "blue",
-          "width": 6,
-          "style": "SOLID",
-          "lineType": "SINGLE",
-          "showArrow": true,
-          "anchors": [
-            {
-              "id": "a-27",
-              "ref": {
-                "item": "item-16"
-              }
-            },
-            {
-              "id": "a-28",
-              "ref": {
-                "item": "item-3"
-              }
-            }
-          ]
-        },
-        {
-          "id": "conn-15",
-          "description": "SQLite",
-          "color": "orange",
-          "width": 6,
-          "style": "SOLID",
-          "lineType": "SINGLE",
-          "showArrow": true,
-          "anchors": [
-            {
-              "id": "a-29",
-              "ref": {
-                "item": "item-18"
-              }
-            },
-            {
-              "id": "a-30",
-              "ref": {
-                "item": "item-21"
-              }
-            }
-          ]
-        },
-        {
-          "id": "conn-16",
-          "description": "indexing",
-          "color": "orange",
-          "width": 6,
-          "style": "SOLID",
-          "lineType": "SINGLE",
-          "showArrow": true,
-          "anchors": [
-            {
-              "id": "a-31",
-              "ref": {
-                "item": "item-19"
-              }
-            },
-            {
-              "id": "a-32",
               "ref": {
                 "item": "item-20"
               }
@@ -1126,22 +1023,229 @@
           ]
         },
         {
-          "id": "conn-17",
-          "description": "cache",
+          "id": "conn-12",
+          "description": "Chrome ext",
+          "color": "violet",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-23",
+              "ref": {
+                "item": "item-7"
+              }
+            },
+            {
+              "id": "a-24",
+              "ref": {
+                "item": "item-17"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-13",
+          "description": "local S3",
           "color": "orange",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-25",
+              "ref": {
+                "item": "item-8"
+              }
+            },
+            {
+              "id": "a-26",
+              "ref": {
+                "item": "item-18"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-14",
+          "description": "localhost",
+          "color": "orange",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-27",
+              "ref": {
+                "item": "item-8"
+              }
+            },
+            {
+              "id": "a-28",
+              "ref": {
+                "item": "item-19"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-15",
+          "description": "Caddy proxy",
+          "color": "red",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-29",
+              "ref": {
+                "item": "item-10"
+              }
+            },
+            {
+              "id": "a-30",
+              "ref": {
+                "item": "item-14"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-16",
+          "description": "HTTP deploy",
+          "color": "red",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-31",
+              "ref": {
+                "item": "item-10"
+              }
+            },
+            {
+              "id": "a-32",
+              "ref": {
+                "item": "item-12"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-17",
+          "description": "Pages CNAME",
+          "color": "blue",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
               "id": "a-33",
               "ref": {
-                "item": "item-19"
+                "item": "item-15"
               }
             },
             {
               "id": "a-34",
+              "ref": {
+                "item": "item-3"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-18",
+          "description": "Fly.io DNS",
+          "color": "blue",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-35",
+              "ref": {
+                "item": "item-16"
+              }
+            },
+            {
+              "id": "a-36",
+              "ref": {
+                "item": "item-3"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-19",
+          "description": "SQLite backup",
+          "color": "orange",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-37",
+              "ref": {
+                "item": "item-18"
+              }
+            },
+            {
+              "id": "a-38",
+              "ref": {
+                "item": "item-21"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-20",
+          "description": "vector index",
+          "color": "orange",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-39",
+              "ref": {
+                "item": "item-19"
+              }
+            },
+            {
+              "id": "a-40",
+              "ref": {
+                "item": "item-20"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-21",
+          "description": "cache/pipeline",
+          "color": "orange",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-41",
+              "ref": {
+                "item": "item-19"
+              }
+            },
+            {
+              "id": "a-42",
               "ref": {
                 "item": "item-23"
               }
@@ -1149,22 +1253,22 @@
           ]
         },
         {
-          "id": "conn-18",
-          "description": "metrics",
-          "color": "orange",
-          "width": 6,
-          "style": "SOLID",
+          "id": "conn-22",
+          "description": "metrics push",
+          "color": "teal",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
-              "id": "a-35",
+              "id": "a-43",
               "ref": {
                 "item": "item-19"
               }
             },
             {
-              "id": "a-36",
+              "id": "a-44",
               "ref": {
                 "item": "item-22"
               }
@@ -1172,22 +1276,22 @@
           ]
         },
         {
-          "id": "conn-19",
-          "description": "LLM API",
-          "color": "purple",
-          "width": 6,
-          "style": "SOLID",
+          "id": "conn-23",
+          "description": "LLM API calls",
+          "color": "violet",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
-              "id": "a-37",
+              "id": "a-45",
               "ref": {
                 "item": "item-27"
               }
             },
             {
-              "id": "a-38",
+              "id": "a-46",
               "ref": {
                 "item": "item-10"
               }
@@ -1195,22 +1299,45 @@
           ]
         },
         {
-          "id": "conn-20",
-          "description": "exit",
-          "color": "blue",
-          "width": 6,
-          "style": "SOLID",
+          "id": "conn-24",
+          "description": "training API",
+          "color": "violet",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
-              "id": "a-39",
+              "id": "a-47",
+              "ref": {
+                "item": "item-28"
+              }
+            },
+            {
+              "id": "a-48",
+              "ref": {
+                "item": "item-10"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-25",
+          "description": "exit tunnel",
+          "color": "blue",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-49",
               "ref": {
                 "item": "item-13"
               }
             },
             {
-              "id": "a-40",
+              "id": "a-50",
               "ref": {
                 "item": "item-1"
               }
@@ -1218,22 +1345,22 @@
           ]
         },
         {
-          "id": "conn-21",
+          "id": "conn-26",
           "description": "exit EU",
           "color": "blue",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
-              "id": "a-41",
+              "id": "a-51",
               "ref": {
                 "item": "item-24"
               }
             },
             {
-              "id": "a-42",
+              "id": "a-52",
               "ref": {
                 "item": "item-1"
               }
@@ -1241,22 +1368,22 @@
           ]
         },
         {
-          "id": "conn-22",
+          "id": "conn-27",
           "description": "exit NP",
           "color": "blue",
-          "width": 6,
-          "style": "SOLID",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
-              "id": "a-43",
+              "id": "a-53",
               "ref": {
                 "item": "item-25"
               }
             },
             {
-              "id": "a-44",
+              "id": "a-54",
               "ref": {
                 "item": "item-1"
               }
@@ -1264,24 +1391,116 @@
           ]
         },
         {
-          "id": "conn-23",
-          "description": "ACL policy",
-          "color": "black",
-          "width": 6,
-          "style": "SOLID",
+          "id": "conn-28",
+          "description": "control exit",
+          "color": "blue",
+          "width": 4,
+          "style": "DASHED",
           "lineType": "SINGLE",
           "showArrow": true,
           "anchors": [
             {
-              "id": "a-45",
+              "id": "a-55",
               "ref": {
-                "item": "item-1"
+                "item": "item-39"
               }
             },
             {
-              "id": "a-46",
+              "id": "a-56",
               "ref": {
-                "item": "item-42"
+                "item": "item-1"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-29",
+          "description": "enterprise",
+          "color": "blue",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-57",
+              "ref": {
+                "item": "item-40"
+              }
+            },
+            {
+              "id": "a-58",
+              "ref": {
+                "item": "item-1"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-30",
+          "description": "Tailscale",
+          "color": "teal",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-59",
+              "ref": {
+                "item": "item-34"
+              }
+            },
+            {
+              "id": "a-60",
+              "ref": {
+                "item": "item-1"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-31",
+          "description": "media bridge",
+          "color": "teal",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-61",
+              "ref": {
+                "item": "item-35"
+              }
+            },
+            {
+              "id": "a-62",
+              "ref": {
+                "item": "item-1"
+              }
+            }
+          ]
+        },
+        {
+          "id": "conn-32",
+          "description": "save results",
+          "color": "violet",
+          "width": 4,
+          "style": "DASHED",
+          "lineType": "SINGLE",
+          "showArrow": true,
+          "anchors": [
+            {
+              "id": "a-63",
+              "ref": {
+                "item": "item-17"
+              }
+            },
+            {
+              "id": "a-64",
+              "ref": {
+                "item": "item-19"
               }
             }
           ]
@@ -1525,31 +1744,39 @@
     },
     {
       "id": "blue",
-      "value": "#2196F3"
+      "value": "#5B9BD5"
     },
     {
       "id": "green",
-      "value": "#4CAF50"
+      "value": "#6BCB77"
     },
     {
       "id": "red",
-      "value": "#F44336"
+      "value": "#E74C3C"
     },
     {
       "id": "orange",
-      "value": "#FF9800"
+      "value": "#F39C12"
     },
     {
-      "id": "purple",
-      "value": "#9C27B0"
+      "id": "violet",
+      "value": "#9B59B6"
     },
     {
-      "id": "black",
-      "value": "#424242"
+      "id": "amber",
+      "value": "#E67E22"
+    },
+    {
+      "id": "yellow",
+      "value": "#F1C40F"
+    },
+    {
+      "id": "teal",
+      "value": "#1ABC9C"
     },
     {
       "id": "gray",
-      "value": "#9E9E9E"
+      "value": "#95A5A6"
     }
   ]
 }
