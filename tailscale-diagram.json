@@ -254,6 +254,66 @@
       "name": "Tailscale ACL",
       "description": "Network access controls\nTailnet policy engine\n───────────────\nCLI: tailscale acl ✓\nRules: 24 active\nTags: 8 configured\nDefault: deny-all\nMagicDNS: enabled\nAuto-approvers: 3 rules",
       "icon": "firewall"
+    },
+    {
+      "id": "item-43",
+      "name": "● ONLINE",
+      "description": "Node is reachable\nTailscale connected\nAll services running\n───────────────\nRectangle: dark green bg\nIndicator: green status",
+      "icon": "server"
+    },
+    {
+      "id": "item-44",
+      "name": "◆ SERVICE",
+      "description": "Web service / domain\nDeployed to cloud\nExternal-facing\n───────────────\nRectangle: dark violet bg\nIndicator: purple status",
+      "icon": "cloud"
+    },
+    {
+      "id": "item-45",
+      "name": "◈ EXIT NODE",
+      "description": "Tailscale exit node\nRoutes traffic to internet\nRegion-specific\n───────────────\nRectangle: dark amber bg\nIndicator: orange status",
+      "icon": "router"
+    },
+    {
+      "id": "item-46",
+      "name": "○ OFFLINE",
+      "description": "Node unreachable\nTailscale disconnected\nCold standby / stale\n───────────────\nRectangle: dark red bg\nIndicator: red status",
+      "icon": "server"
+    },
+    {
+      "id": "item-47",
+      "name": "Node.js / Bun",
+      "description": "Node v22.x / Bun v1.1+\nnpm, pnpm, yarn\n───────────────\nInstalled: ✓ active\nProjects: 15+ package.json\nRuntime: both available\nPM: npm default",
+      "icon": "cube"
+    },
+    {
+      "id": "item-48",
+      "name": "Python / uv",
+      "description": "Python 3.12+ / uv v0.4+\npip, venv, virtualenv\n───────────────\nInstalled: ✓ active\nPackages: data science stack\nNotebooks: jupyter ✓\nML: torch, transformers",
+      "icon": "cube"
+    },
+    {
+      "id": "item-49",
+      "name": "Rust / Cargo",
+      "description": "rustc nightly + stable\ncargo, rustup, clippy\n───────────────\nInstalled: ✓ on zed-betterclaw\nToolchain: nightly-2024+\nTargets: wasm, aarch64\nLint: clippy ✓",
+      "icon": "cube"
+    },
+    {
+      "id": "item-50",
+      "name": "Go / golang",
+      "description": "Go 1.22+\ngo mod, go test\n───────────────\nInstalled: ✓ active\nProjects: CLI tools, APIs\nLinter: golangci-lint ✓\nVersion: 1.22+",
+      "icon": "cube"
+    },
+    {
+      "id": "item-51",
+      "name": "DevOps CLI",
+      "description": "Docker, gh, fly, wrangler\nmise, just, portless\n───────────────\nInstalled: ✓ all active\nDocker: OrbStack\nCI: gh actions ✓\nDeploy: fly, vercel, cf",
+      "icon": "cube"
+    },
+    {
+      "id": "item-52",
+      "name": "AI Agents",
+      "description": "claude, codex, hermes\nacpx, ollama, modal\n───────────────\nInstalled: ✓ all active\nModels: 44+ providers\nGateway: OmniRoute\nExtensions: pzdrk v7.2",
+      "icon": "cube"
     }
   ],
   "views": [
@@ -596,6 +656,86 @@
             "y": 57
           },
           "labelHeight": 180
+        },
+        {
+          "id": "item-43",
+          "tile": {
+            "x": 0,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-44",
+          "tile": {
+            "x": 5,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-45",
+          "tile": {
+            "x": 10,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-46",
+          "tile": {
+            "x": 15,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-47",
+          "tile": {
+            "x": 37,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-48",
+          "tile": {
+            "x": 42,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-49",
+          "tile": {
+            "x": 47,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-50",
+          "tile": {
+            "x": 52,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-51",
+          "tile": {
+            "x": 57,
+            "y": 68
+          },
+          "labelHeight": 180
+        },
+        {
+          "id": "item-52",
+          "tile": {
+            "x": 62,
+            "y": 68
+          },
+          "labelHeight": 180
         }
       ],
       "rectangles": [
@@ -765,6 +905,34 @@
           "to": {
             "x": 39,
             "y": 62
+          }
+        },
+        {
+          "id": "rect-13",
+          "color": "green",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
+          "from": {
+            "x": -1,
+            "y": 67
+          },
+          "to": {
+            "x": 17,
+            "y": 73
+          }
+        },
+        {
+          "id": "rect-14",
+          "color": "green",
+          "customColor": "#0a2e0a",
+          "opacity": 0.25,
+          "from": {
+            "x": 36,
+            "y": 67
+          },
+          "to": {
+            "x": 64,
+            "y": 73
           }
         }
       ],
@@ -1624,6 +1792,26 @@
             "y": 55
           },
           "content": "SECURITY & POLICY",
+          "fontSize": 0.8,
+          "orientation": "X"
+        },
+        {
+          "id": "tb-13",
+          "tile": {
+            "x": 0,
+            "y": 66
+          },
+          "content": "LEGEND — STATUS COLORS",
+          "fontSize": 0.8,
+          "orientation": "X"
+        },
+        {
+          "id": "tb-14",
+          "tile": {
+            "x": 37,
+            "y": 66
+          },
+          "content": "CLI TOOLCHAIN — tb-mac",
           "fontSize": 0.8,
           "orientation": "X"
         }
